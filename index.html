@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Arte</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <aside id="sidebar" class="hidden">
+      <button id="closeSidebar">×</button>
+      <nav>
+        <ul>
+          <li><a href="#presentacion">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#footer">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header id="header">
+      <button id="openSidebar">☰</button>
+      <h1 class="" id="titulo-principal">Astro Arte Casa3</h1>
+    </header>
+
+    <main>
+      <section id="presentacion">
+        <div class="presentacion-grid">
+          <div class="presentacion-texto">
+            <h2 class="agrandarx1" id="id-h2-0">
+              Explora tu Universo Interior
+            </h2>
+            <p>
+              Con Astro Arte podrás/te ayudamos /a conocerte de una manera
+              distina, con nuestro/el
+              <span class="resaltar"
+                ><i><a href="#tarot-evolutivo">tarot evolutivo</a></i></span
+              >,
+              <span class="resaltar"
+                ><i><a href="#astrologia">astrología</a></i></span
+              >
+              y
+              <span class="resaltar"
+                ><i><a href="#biodecodificacion">biodecodificacion</a></i></span
+              >
+              podras acceder a un conocimiento oculto sobre tu vida, ondando en
+              el crecimiento espiritual, el desarrollo personal y la
+              autosuperación.
+            </p>
+          </div>
+          <div class="presentacion-imagen">
+            <img src="imagen-fondo.jpeg" alt="Astrología" />
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios">
+        <span id="span-servicios-titulo"
+          ><h2 class="agrandarx1">Servicios</h2></span
+        >
+        <div class="carrusel" id="carrusel">
+          <div class="card" id="tarot-evolutivo">Tarot evolutivo</div>
+          <div class="card" id="astrologia">Astrología</div>
+          <div class="card" id="biodecodificacion">Biodecodificación</div>
+          <div class="card" id="carta-natal">Carta natal</div>
+          <div class="card">talleres y cursos</div>
+        </div>
+      </section>
+
+      <section id="sobre-mi">
+        <h2>Sobre Mí</h2>
+        <p>Soy ....</p>
+      </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+          <p id="respuesta-form" class="respuesta"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>
+        &copy; 2025 Astro Guía | <a href="#">Instagram</a> |
+        <a href="#">Contacto</a>
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

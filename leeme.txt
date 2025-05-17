@@ -1,0 +1,14 @@
+si estas con celular => {
+
+    toca donde dice index,
+    luego toca tu navegador de confianza
+    ( ejemplo chrome ) 
+
+}
+
+si estas en computadora => {
+
+    cliquea dos veces en index y deberia de aparecerte la pagina web
+    
+
+}
