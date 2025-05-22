@@ -3,103 +3,518 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astro Arte</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Infografía: Análisis Profundo de Cinturones de Seguridad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f0f8ff; /* AliceBlue - Fondo claro general */
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* Ajusta según necesidad */
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px; /* Altura base */
+        max-height: 400px; /* Máxima altura */
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 350px;
+        }
+      }
+      .stat-card {
+        background-color: #ff7f50; /* Coral - Color primario de la paleta "Energetic & Playful" */
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .section-title {
+        color: #483d8b; /* DarkSlateBlue - Para títulos */
+        border-bottom: 3px solid #ff7f50; /* Coral */
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+      }
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+      .flow-step {
+        background-color: #40e0d0; /* Turquoise */
+        color: #483d8b; /* DarkSlateBlue */
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 12px;
+        text-align: center;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+      .flow-arrow {
+        font-size: 24px;
+        color: #ff7f50; /* Coral */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+      /* --- CONFIRMACIONES --- */
+      /* Paleta de colores elegida: "Energetic & Playful" (aproximada con Coral, Turquoise, Gold, HotPink, DarkSlateBlue) */
+      /* Plan de Narrativa:
+            1. Título e Introducción: La Física de la Seguridad Vial (Inercia).
+            2. Panorama del "Mercado": Tipos de Cinturones y sus Características (Comparativa).
+            3. "Innovaciones" y Mecanismos Clave: Cómo Funcionan para Proteger.
+            4. Segmentos de Aplicación Especializada: Cinturones en la Aviación.
+            5. Conclusión: Impacto y Relevancia Continua.
+        */
+      /* Selección de Visualizaciones:
+            - Principio de Inercia: Texto destacado, HTML/CSS simple. Meta: Informar. Justificación: Claridad conceptual. NO SVG.
+            - Consecuencias sin cinturón: Texto de impacto. Meta: Informar. Justificación: Énfasis. NO SVG.
+            - Comparativa de Tipos (Puntos de Anclaje): Gráfico de Barras (Chart.js). Meta: Comparar. Justificación: Visualización clara de diferencias numéricas. Canvas. NO SVG.
+            - Características de Tipos: Tabla HTML/CSS. Meta: Organizar. Justificación: Presentación estructurada de datos. NO SVG.
+            - Cómo Funcionan (Distribución, Absorción, Pretensores): Lista HTML/CSS con iconos Unicode. Meta: Organizar. Justificación: Claridad de características. NO SVG.
+            - Aplicación en Aviación: Lista HTML/CSS con iconos Unicode. Meta: Informar. Justificación: Destacar usos específicos. NO SVG.
+            - NO se usó Mermaid JS.
+            - NO se usó SVG.
+        */
+    </style>
   </head>
-  <body>
-    <aside id="sidebar" class="hidden">
-      <button id="closeSidebar">×</button>
-      <nav>
-        <ul>
-          <li><a href="#presentacion">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#sobre-mi">Sobre mí</a></li>
-          <li><a href="#footer">Contacto</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <header id="header">
-      <button id="openSidebar">☰</button>
-      <h1 class="" id="titulo-principal">Astro Arte Casa3</h1>
+  <body class="text-gray-800">
+    <header class="bg-[#483D8B] text-white py-8 shadow-lg">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold mb-2">
+          Análisis del Panorama de Seguridad Vehicular:
+        </h1>
+        <h2 class="text-2xl font-semibold text-[#FFD700]">
+          El Rol Crucial de los Cinturones de Seguridad
+        </h2>
+      </div>
     </header>
 
-    <main>
-      <section id="presentacion">
-        <div class="presentacion-grid">
-          <div class="presentacion-texto">
-            <h2 class="agrandarx1" id="id-h2-0">
-              Explora tu Universo Interior
-            </h2>
-            <p>
-              Con Astro Arte podrás/te ayudamos /a conocerte de una manera
-              distina, con nuestro/el
-              <span class="resaltar"
-                ><i><a href="#tarot-evolutivo">tarot evolutivo</a></i></span
-              >,
-              <span class="resaltar"
-                ><i><a href="#astrologia">astrología</a></i></span
-              >
-              y
-              <span class="resaltar"
-                ><i><a href="#biodecodificacion">biodecodificacion</a></i></span
-              >
-              podras acceder a un conocimiento oculto sobre tu vida, ondando en
-              el crecimiento espiritual, el desarrollo personal y la
-              autosuperación.
+    <main class="container mx-auto px-6 py-8">
+      <section id="introduccion" class="mb-12">
+        <h2 class="text-3xl font-bold section-title">
+          1. Fundamentos Físicos: La Inercia y su Impacto Directo
+        </h2>
+        <div class="card">
+          <p class="text-lg mb-4">
+            La comprensión de la seguridad vehicular comienza con un principio
+            físico fundamental: la <strong>Primera Ley de Newton</strong> o Ley
+            de Inercia. Esta ley dicta que un objeto en movimiento tiende a
+            permanecer en movimiento a menos que una fuerza externa actúe sobre
+            él.
+          </p>
+          <div class="bg-[#FFD700] p-6 rounded-lg text-[#483D8B] shadow-md">
+            <p class="text-2xl font-semibold text-center">
+              "Un cuerpo en movimiento permanece en movimiento..."
             </p>
           </div>
-          <div class="presentacion-imagen">
-            <img src="imagen-fondo.jpeg" alt="Astrología" />
+          <p class="mt-4 text-lg">
+            En el contexto de un accidente automovilístico, el vehículo puede
+            detenerse bruscamente. Sin embargo, debido a la inercia, los
+            ocupantes que no utilizan cinturón de seguridad continúan su
+            trayectoria original. Esto resulta en impactos violentos contra
+            componentes internos del vehículo como el volante, el parabrisas o
+            el tablero.
+          </p>
+          <div class="stat-card mt-6">
+            <h3 class="text-xl font-semibold mb-1">
+              Consecuencia Directa Sin Protección:
+            </h3>
+            <p class="text-3xl font-bold">LESIONES GRAVES</p>
+            <p class="text-sm mt-1">
+              Impactos internos pueden llevar a traumatismos severos e incluso
+              fatales.
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="servicios">
-        <span id="span-servicios-titulo"
-          ><h2 class="agrandarx1">Servicios</h2></span
-        >
-        <div class="carrusel" id="carrusel">
-          <div class="card" id="tarot-evolutivo">Tarot evolutivo</div>
-          <div class="card" id="astrologia">Astrología</div>
-          <div class="card" id="biodecodificacion">Biodecodificación</div>
-          <div class="card" id="carta-natal">Carta natal</div>
-          <div class="card">talleres y cursos</div>
+      <section id="tipos-mercado" class="mb-12">
+        <h2 class="text-3xl font-bold section-title">
+          2. Diversidad en el "Mercado" de Sujeción: Tipología y Aplicaciones
+        </h2>
+        <div class="card">
+          <p class="text-lg mb-6">
+            El "mercado" de los cinturones de seguridad ofrece diversas
+            soluciones adaptadas a diferentes necesidades y niveles de
+            protección. La clasificación principal se basa en el número de
+            puntos de anclaje, que determina la eficacia de la sujeción. A
+            continuación, se presenta una comparativa y un detalle de los tipos
+            más relevantes.
+          </p>
+          <h3 class="text-2xl font-semibold text-[#483D8B] mb-4">
+            Comparativa: Nivel de Sujeción por Puntos de Anclaje
+          </h3>
+          <p class="text-md mb-4">
+            Este gráfico ilustra el número de puntos de anclaje para los tipos
+            de cinturones más comunes, un indicador clave de su capacidad de
+            retención. Es importante notar que el "Cinturón Tipo X" se incluye
+            conceptualmente basado en su descripción de mejora en la sujeción.
+          </p>
+          <div class="chart-container bg-white p-4 rounded-lg shadow">
+            <canvas id="tiposCinturonChart"></canvas>
+          </div>
+          <p class="text-sm text-gray-600 mt-2 text-center">
+            Gráfico 1: Puntos de Anclaje por Tipo de Cinturón.
+          </p>
+
+          <h3 class="text-2xl font-semibold text-[#483D8B] mt-8 mb-4">
+            Características Detalladas y Usos Predominantes
+          </h3>
+          <div class="overflow-x-auto">
+            <table
+              class="min-w-full bg-white border border-gray-300 rounded-lg shadow"
+            >
+              <thead class="bg-[#40E0D0] text-[#483D8B]">
+                <tr>
+                  <th class="py-3 px-4 border-b text-left font-semibold">
+                    Tipo de Cinturón
+                  </th>
+                  <th class="py-3 px-4 border-b text-left font-semibold">
+                    Características Principales
+                  </th>
+                  <th class="py-3 px-4 border-b text-left font-semibold">
+                    "Segmento de Mercado" (Uso Común)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-gray-50">
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    De Dos Puntos
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Sujeta la cadera en ambos lados.
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Autobuses, aviones comerciales (pasajeros).
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    De Tres Puntos
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Combina cinturón de regazo y bandolera (hombro-pecho).
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Automóviles particulares (estándar actual).
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    De Cinco Puntos
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Dos en hombros, dos en caderas, uno entrepierna.
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Sillas de seguridad infantiles, aviación
+                    (pilotos/copilotos), competición.
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="py-3 px-4 border-b border-gray-200">En X</td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Dos cinturones adicionales cruzados en X. Mejora la
+                    sujeción.
+                  </td>
+                  <td class="py-3 px-4 border-b border-gray-200">
+                    Aplicaciones especializadas que requieren sujeción superior.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-sm text-gray-600 mt-2 text-center">
+            Tabla 1: Clasificación y Aplicaciones de Cinturones de Seguridad.
+          </p>
+
+          <h3 class="text-2xl font-semibold text-[#483D8B] mt-8 mb-4">
+            "Nichos de Mercado": Soluciones Especializadas
+          </h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="card bg-[#FF69B4] text-white p-4">
+              <h4 class="font-bold text-lg mb-1">
+                🤰 Cinturón para Embarazadas
+              </h4>
+              <p class="text-sm">
+                Ajustado para desviar la presión del abdomen, protegiendo al
+                feto.
+              </p>
+            </div>
+            <div class="card bg-[#FF69B4] text-white p-4">
+              <h4 class="font-bold text-lg mb-1">🐾 Cinturón para Mascotas</h4>
+              <p class="text-sm">
+                Diseñado para asegurar animales, limitando su movimiento y
+                protegiéndolos.
+              </p>
+            </div>
+            <div class="card bg-[#FF69B4] text-white p-4">
+              <h4 class="font-bold text-lg mb-1">💪 Cinturón Ergonómico</h4>
+              <p class="text-sm">
+                Adaptado a la forma del cuerpo para mayor comodidad sin
+                sacrificar seguridad.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
-        <p>Soy ....</p>
+      <section id="mecanismos" class="mb-12">
+        <h2 class="text-3xl font-bold section-title">
+          3. "Tecnología" de Protección: El Cinturón como Amortiguador
+          Inteligente
+        </h2>
+        <div class="card">
+          <p class="text-lg mb-6">
+            Más allá de la simple retención, los cinturones de seguridad
+            incorporan "tecnologías" diseñadas para mitigar las fuerzas de un
+            impacto. Actúan como un sistema de amortiguación sofisticado.
+          </p>
+          <div class="grid md:grid-cols-1 gap-4">
+            <div class="flow-step">
+              🛡️ <span class="ml-2">Distribución de la Fuerza del Impacto</span>
+              <p class="text-sm font-normal mt-1 text-gray-700">
+                La fuerza se reparte sobre áreas más amplias y resistentes del
+                cuerpo (hombro, pecho, caderas), reduciendo la presión puntual y
+                el riesgo de daño a órganos internos.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              ⚡ <span class="ml-2">Absorción de Energía Cinética</span>
+              <p class="text-sm font-normal mt-1 text-gray-700">
+                Los materiales del cinturón se estiran de forma controlada,
+                absorbiendo parte de la energía del impacto y desacelerando el
+                cuerpo gradualmente.
+              </p>
+            </div>
+            <div class="flow-arrow">▼</div>
+            <div class="flow-step">
+              🤏 <span class="ml-2">"Innovación": Pretensores</span>
+              <p class="text-sm font-normal mt-1 text-gray-700">
+                En algunos sistemas avanzados, los pretensores tensan la cinta
+                instantáneamente antes del impacto, eliminando holguras y
+                optimizando la sujeción del ocupante desde el primer momento.
+              </p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mt-4 text-center">
+            Diagrama 1: Flujo de Mecanismos de Protección del Cinturón.
+          </p>
+        </div>
       </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="form-contacto">
-          <div class="campo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required />
+
+      <section id="aviacion" class="mb-12">
+        <h2 class="text-3xl font-bold section-title">
+          4. "Mercados Verticales": La Seguridad Aérea y sus Particularidades
+        </h2>
+        <div class="card">
+          <p class="text-lg mb-6">
+            El uso de cinturones de seguridad se extiende más allá de los
+            automóviles, siendo un componente crítico en la aviación comercial y
+            privada, aunque con funciones y énfasis ligeramente distintos.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div class="p-6 bg-gray-100 rounded-lg shadow">
+              <span class="text-4xl">✈️</span>
+              <h4 class="font-semibold text-xl mt-2 mb-1 text-[#483D8B]">
+                Anti-Turbulencia
+              </h4>
+              <p class="text-sm">
+                Principalmente para evitar que los pasajeros sean despedidos de
+                sus asientos durante turbulencias o movimientos bruscos.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow">
+              <span class="text-4xl">💥</span>
+              <h4 class="font-semibold text-xl mt-2 mb-1 text-[#483D8B]">
+                Seguridad en Incidentes
+              </h4>
+              <p class="text-sm">
+                En caso de aterrizajes forzosos o accidentes, ayudan a mantener
+                a los ocupantes sujetos, reduciendo lesiones.
+              </p>
+            </div>
+            <div class="p-6 bg-gray-100 rounded-lg shadow">
+              <span class="text-4xl">🆔</span>
+              <h4 class="font-semibold text-xl mt-2 mb-1 text-[#483D8B]">
+                Identificación Post-Siniestro
+              </h4>
+              <p class="text-sm">
+                Lamentablemente, en escenarios de siniestros graves, ayudan a la
+                rápida y eficaz identificación de los cuerpos.
+              </p>
+            </div>
           </div>
-          <div class="campo">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+          <p class="mt-6 text-lg">
+            Es notable que en la aviación, especialmente para pilotos y
+            copilotos, se utilizan sistemas avanzados como el
+            <strong>cinturón de cinco puntos</strong>, que ofrece una sujeción
+            superior adaptada a las fuerzas dinámicas que pueden experimentarse.
+          </p>
+        </div>
+      </section>
+
+      <section id="conclusion" class="mb-12">
+        <h2 class="text-3xl font-bold section-title">
+          5. Conclusión: Un "Producto" Indispensable en la Seguridad Moderna
+        </h2>
+        <div class="card text-center">
+          <p class="text-xl mb-4">
+            La función principal del cinturón de seguridad, independientemente
+            de su tipo o "mercado" de aplicación, es constante:
+            <strong
+              >limitar el movimiento corporal en caso de impacto y reducir
+              drásticamente el riesgo de lesiones graves o fatales.</strong
+            >
+          </p>
+          <div class="stat-card">
+            <p class="text-2xl font-bold">
+              EL CINTURÓN DE SEGURIDAD SALVA VIDAS.
+            </p>
+            <p class="text-md mt-1">
+              Su uso no es una opción, es una necesidad basada en la física y la
+              prevención.
+            </p>
           </div>
-          <div class="campo">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-          </div>
-          <button type="submit">Enviar</button>
-          <p id="respuesta-form" class="respuesta"></p>
-        </form>
+          <p class="mt-6 text-lg">
+            Desde el diseño más simple de dos puntos hasta los sofisticados
+            sistemas de múltiples anclajes con pretensores, la "tecnología" del
+            cinturón de seguridad continúa siendo una de las innovaciones más
+            impactantes y efectivas en la protección de la vida humana en
+            movimiento.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer id="footer">
-      <p>
-        &copy; 2025 Astro Guía | <a href="#">Instagram</a> |
-        <a href="#">Contacto</a>
-      </p>
+    <footer class="bg-[#483D8B] text-white py-6 mt-12">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-sm">
+          &copy; 2025 Análisis de Tendencias en Seguridad Vehicular.
+        </p>
+      </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      function wrapLabel(str, maxWidth) {
+        if (str.length <= maxWidth) {
+          return str;
+        }
+        const words = str.split(" ");
+        const lines = [];
+        let currentLine = "";
+        for (const word of words) {
+          if (
+            (currentLine + word).length > maxWidth &&
+            currentLine.length > 0
+          ) {
+            lines.push(currentLine.trim());
+            currentLine = "";
+          }
+          currentLine += word + " ";
+        }
+        lines.push(currentLine.trim());
+        return lines;
+      }
+
+      const tiposCinturonCtx = document
+        .getElementById("tiposCinturonChart")
+        .getContext("2d");
+      const tiposCinturonData = {
+        labels: [
+          wrapLabel("Cinturón de Dos Puntos", 16),
+          wrapLabel("Cinturón de Tres Puntos", 16),
+          wrapLabel("Cinturón de Cinco Puntos", 16),
+          wrapLabel("Cinturón Tipo X (Conceptual)", 16),
+        ],
+        datasets: [
+          {
+            label: "Número de Puntos de Anclaje",
+            data: [2, 3, 5, 4], // Asumiendo 4 para Tipo X por "mejora"
+            backgroundColor: [
+              "#FF7F50", // Coral
+              "#40E0D0", // Turquoise
+              "#FFD700", // Gold
+              "#FF69B4", // HotPink
+            ],
+            borderColor: ["#E57373", "#4DB6AC", "#FFC107", "#F06292"],
+            borderWidth: 1,
+          },
+        ],
+      };
+      const tiposCinturonConfig = {
+        type: "bar",
+        data: tiposCinturonData,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Puntos de Anclaje",
+                color: "#483D8B",
+                font: {
+                  weight: "bold",
+                },
+              },
+              ticks: {
+                color: "#483D8B",
+              },
+            },
+            x: {
+              ticks: {
+                color: "#483D8B",
+                font: {
+                  size: 10,
+                },
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: "#483D8B",
+                font: {
+                  weight: "bold",
+                },
+              },
+            },
+            tooltip: {
+              backgroundColor: "#483D8B",
+              titleColor: "#FFFFFF",
+              bodyColor: "#FFFFFF",
+              callbacks: {
+                title: function (tooltipItems) {
+                  const item = tooltipItems[0];
+                  let label = item.chart.data.labels[item.dataIndex];
+                  if (Array.isArray(label)) {
+                    return label.join(" ");
+                  } else {
+                    return label;
+                  }
+                },
+              },
+            },
+          },
+        },
+      };
+      new Chart(tiposCinturonCtx, tiposCinturonConfig);
+    </script>
   </body>
 </html>
