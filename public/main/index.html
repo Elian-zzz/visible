@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>servicios</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <aside id="sidebar" class="hidden">
+      <button id="closeSidebar">×</button>
+      <nav>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">servicios</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#footer">Redes sociales</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header id="header">
+      <button id="openSidebar">☰</button>
+      <h1 class="" id="titulo-principal">Astro Arte Casa3</h1>
+      <nav id="idnav">
+        <ul id="lista-nav">
+          <li><a href="/">inicio</a></li>
+          <li><a href="/servicios">servicios</a></li>
+          <li><a href="#sobre-mi">sobre mi</a></li>
+          <li><a href="#reservas">reservas</a></li>
+          <li><a href="#">cursos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <button id="boton-fijo" title="contacto whatsapp">
+        <img
+          src="../images/logo-contacto.webp"
+          alt="imagen contacto"
+          id="imagen-btn-contacto"
+        />
+      </button>
+      <section id="presentación-de-cursos">
+        <div class="banda">
+          <h1>
+            ¡¡¡Enconcuentra las herramientas para completar tu autoconocimiento
+            ya!!!
+          </h1>
+        </div>
+        <span id="Parrafo_editado"
+          ><p>Cursos disponibles desde el día __ al día __ .</p></span
+        >
+        <!-- Advertencía de muestra.-->
+        <div class="advertencia">
+          No hay mas reservas disponibles hasta julio
+        </div>
+      </section>
+      <section id="información-cursos">
+        <div class="card">
+          <img src="" alt="Imagen-servicio" />
+          <h2>Carta Natal</h2>
+          <p>
+            La carta natal es un conjunto de calculos matematicos los cuales
+            remontan a la alineación de las estrellas ...
+          </p>
+        </div>
+        <div class="card">
+          <img src="" alt="Imagen-servicio-2" />
+          <h2>Revolución solar</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+            mollitia labore, rem molestias est
+          </p>
+        </div>
+        <div class="card">
+          <img src="" alt="Imagen-servicio-3" />
+          <h2>Tránsitos</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+            asperiores labore. Totam iusto enim quaerat possimus nobis
+          </p>
+        </div>
+        <div class="card">
+          <img src="" alt="Imagen-servicio-4" />
+          <h2>Siniastrías</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
+            aliquam velit reiciendis cumque nesciunt, iusto repudiandae
+            veritatis
+          </p>
+        </div>
+      </section>
+      <section id="section-buscador">
+        <div class="contenedor">
+          <button id="btn-buscar">Buscar</button>
+          <input type="text" name="buscar" id="input-buscar" />
+          <!-- Futura implementación, busqueda en tiempo real. -->
+        </div>
+        <div id="contenedor-temporal" class="hidden"></div>
+      </section>
+    </main>
+    <footer id="footer">
+      <p>
+        &copy; 2025 Astro Guía | <a href="#">Instagram</a> |
+        <a href="#">Contacto</a>
+      </p>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

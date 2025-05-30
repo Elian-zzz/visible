@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Arte</title>
+    <link rel="stylesheet" href="css/style_index.css" />
+  </head>
+  <body>
+    <aside id="sidebar" class="hidden">
+      <button id="closeSidebar">×</button>
+      <nav>
+        <ul>
+          <li><a href="#presentacion">Inicio</a></li>
+          <li><a href="/servicios">servicios</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#footer">Redes sociales</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <header id="header">
+      <button id="openSidebar">☰</button>
+      <h1 class="" id="titulo-principal">Astro Arte Casa3</h1>
+      <nav id="idnav">
+        <ul id="lista-nav">
+          <li><a href="/">inicio</a></li>
+          <li><a href="/servicios">servicios</a></li>
+          <li><a href="#sobre-mi">sobre mi</a></li>
+          <li><a href="#reservas">reservas</a></li>
+          <li><a href="/cursos">cursos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <button id="boton-fijo" title="contacto whatsapp">
+        <img
+          src="images/logo-contacto.webp"
+          alt="imagen contacto"
+          id="imagen-btn-contacto"
+        />
+      </button>
+      <section id="presentacion">
+        <div class="presentacion-grid">
+          <div class="presentacion-texto">
+            <h2 class="agrandarx1" id="id-h2-0">
+              Explora tu Universo Interior
+            </h2>
+            <p>
+              Con Astro Arte podrás/te ayudamos /a conocerte de una manera
+              distina, con nuestro/el
+              <span class="resaltar"
+                ><i><a href="#tarot-evolutivo">tarot evolutivo</a></i></span
+              >,
+              <span class="resaltar"
+                ><i><a href="#astrologia">astrología</a></i></span
+              >
+              y
+              <span class="resaltar"
+                ><i><a href="#biodecodificacion">biodecodificacion</a></i></span
+              >
+              podras acceder a un conocimiento oculto sobre tu vida, ondando en
+              el crecimiento espiritual, el desarrollo personal y la
+              autosuperación.
+            </p>
+          </div>
+          <div class="presentacion-imagen">
+            <img
+              src="images/imagen-fondo.jpeg"
+              alt="Astrología"
+              id="imagen-astrologia"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios">
+        <span id="span-servicios-titulo"
+          ><h2 class="agrandarx1">Servicios</h2></span
+        >
+        <div class="carrusel" id="carrusel">
+          <div class="card" id="tarot-evolutivo">Tarot evolutivo</div>
+          <div class="card" id="astrologia">Astrología</div>
+          <div class="card" id="biodecodificacion">Biodecodificación</div>
+          <div class="card" id="carta-natal">Carta natal</div>
+          <div class="card">talleres y cursos</div>
+        </div>
+      </section>
+
+      <section id="sobre-mi">
+        <div class="flexeable">
+          <div class="contenedor" id="c01">
+            <h2>Sobre Mí</h2>
+            <p>
+              Soy una Astrologa con __ años de experiencia, apasionada por el
+              autoconocimiento y el crecimiento personal. estudié 4 años en la
+              escuela ____ con el profesor ____,
+            </p>
+          </div>
+          <div class="contenedor" id="sobre-mi-foto">
+            <img
+              id="img-sobre-mi-id"
+              src="images/imagen-carta-natal.jpeg"
+              alt="imagen ejemplo"
+              title="imagen ejemplo"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="trayectoria">
+        <h4>proximo contenido (formación profesional)</h4>
+      </section>
+      <section id="reservas">
+        <h2>Reservas</h2>
+        <form id="form-contacto">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="campo">
+            <label for="mensaje">Motivo de consulta</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          </div>
+          <button type="reset" id="btn-enviar">Enviar</button>
+          <p id="respuesta-form" class="respuesta"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>
+        &copy; 2025 Astro Guía | <a href="#">Instagram</a> |
+        <a href="#">Contacto</a>
+      </p>
+    </footer>
+
+    <script src="js/script_index.js"></script>
+  </body>
+</html>

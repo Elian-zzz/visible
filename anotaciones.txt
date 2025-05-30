@@ -1,0 +1,12 @@
+ES. RE. ( Requerimientos funcionales y no funcionales tiene Astro Arte Casa 3):
+
+RF01: El titulo debe de ser "Astro Arte Casa3".
+RNF01: La pagina web debe enfocarse en temas netamente Astrologicos,
+       mas no puede ser cesgada por una mirada simplista sobre la 
+       vanidacion de la astrologia, usando las palabras que evoquen
+       verdad y conocimiento (no arboles de vida, ni la luna en neptuno, ni nada muy astrologia de mercado).
+RNF02: La lista de los elementos dentro de - Astrologia - son: 
+               Carta natal, revolución solar, tránsitos,siniastrias.
+RNF03: La pagina web tambien cuenta con talleres y cursos (posible implementación de registro), van separados uno de otro.
+RNF04: El sistema debe de contar con un registro de usuarios (Puede ser por email o almacenado en una base de datos tipo servidor).
+

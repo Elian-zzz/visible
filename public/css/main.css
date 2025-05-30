@@ -1,0 +1,317 @@
+:root {
+  --primario: #2f184b;
+  --secundario: #ddb6f2;
+  --claro: #f4ecff;
+  --acento: #f0a6ca;
+  --fondo: #1e1329;
+  --text: #fdfdfd;
+  --secundario_suave: #aa8cbb;
+  --color-letra-advertencia: #ffe600;
+  --color-fondo-advertencia: #c2c178;
+  --color-borde-advertencia: #dd9700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--secundario);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primario);
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 100;
+  background-color: var(--primario);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-hidden {
+  background: transparent;
+  top: -2vmin;
+}
+#openSidebar,
+#closeSidebar {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+#openSidebar:focus,
+#closeSidebar:focus {
+  outline: 2px solid var(--acento);
+  background: var(--claro);
+  color: var(--fondo);
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  max-width: 350px;
+  height: 100%;
+  background: var(--secundario);
+  color: var(--fondo);
+  padding: 2rem 1rem 1rem 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 200;
+}
+#sidebar.show {
+  transform: translateX(0);
+}
+#sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#sidebar nav li {
+  margin: 1rem 0;
+}
+#sidebar nav a {
+  color: var(--fondo);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#sidebar nav a:focus,
+#sidebar nav a:hover {
+  outline: 2px solid var(--acento);
+  background: var(--claro);
+  color: var(--fondo);
+}
+#boton-fijo {
+  position: fixed;
+  width: 50px;
+  display: fit-content;
+  background: transparent;
+  border: none;
+  transition: 100ms ease;
+  top: 86%;
+  left: 87dvw;
+  z-index: 100;
+}
+#boton-fijo:hover {
+  transform: scale(1.3);
+}
+#imagen-btn-contacto {
+  width: inherit;
+  height: inherit;
+}
+@media (max-width: 750px) {
+  #idnav {
+    display: none;
+  }
+}
+footer {
+  background: var(--secundario);
+  text-align: center;
+  padding: 1rem;
+  color: var(--fondo);
+  font-size: 1rem;
+}
+footer a {
+  color: var(--primario);
+  text-decoration: underline;
+}
+footer a:focus,
+footer a:hover {
+  color: var(--acento);
+  background: var(--claro);
+  outline: 2px solid var(--acento);
+}
+@media (width > 750px) {
+  #openSidebar {
+    display: none;
+  }
+  #titulo-principal {
+    margin: 0 auto 0 auto;
+  }
+  #idnav {
+    position: absolute;
+    top: 100%;
+    left: 50dvw;
+    transform: translate(-50%, -50%);
+    color: var(--text);
+    width: 70dvw;
+    background-color: var(--secundario_suave);
+  }
+  #lista-nav {
+    margin: 0px;
+    padding: 0px;
+  }
+  #lista-nav > li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 4dvw;
+  }
+  #boton-fijo {
+    left: 92dvw;
+  }
+  #lista-nav > li > a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  a:hover,
+  a:focus {
+    background: var(--acento);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+#presentación-de-cursos {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: var(--fondo);
+  /* height: 120dvh; */
+  position: relative;
+  color: var(--text);
+}
+#presentación-de-cursos > * {
+  box-sizing: margin-box;
+  margin: 2.7rem;
+}
+#Parrafo_editado {
+  font-style: italic;
+}
+#presentación-de-cursos > h1 {
+  color: var(--secundario);
+  font-size: 2rem;
+}
+.advertencia {
+  border: 2vmin var(--color-borde-advertencia) solid;
+  padding: 2rem;
+  background-color: var(--color-fondo-advertencia);
+  color: var(--color-letra-advertencia);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: x-large;
+  font-variant: small-caps;
+  text-shadow: 2px 2px 2px rgba(154, 236, 0, 0.3);
+}
+
+.banda {
+  padding: 1rem;
+  background-color: var(--acento);
+  margin: none;
+  width: 100%;
+  left: 0px;
+  position: relative;
+  overflow: visible;
+}
+.card {
+  border: 2vmin var(--fondo) solid;
+  margin: 5dvh 0 5dvh 0;
+  padding: 0.5rem;
+  outline: 1px var(--secundario) solid;
+  border-radius: 1rem;
+}
+#información-cursos {
+  padding: 2rem;
+  background-color: var(--primario);
+  display: flex;
+  width: 100dvw;
+}
+
+/* Media query para dispositivos de escritorio */
+@media (min-width: 1000px) {
+  #información-cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .card {
+    width: 50vmin;
+  }
+}
+/* Media query de dispositivos medios como tablets */
+@media (800px < width < 1000px) {
+  #información-cursos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .card {
+    width: 57vmin;
+    margin: 1rem;
+  }
+}
+/* Media query de dispositivos "pequeños" como 
+lo son los celulares */
+@media (width < 800px) {
+  .card {
+    width: 70vmin;
+  }
+  #información-cursos {
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+  }
+}
+.contenedor {
+  padding: 2rem;
+  background-color: var(--color-fondo-advertencia);
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+.contenedor > * {
+  margin-left: 5vmin;
+  font-size: x-large;
+}
+#input-buscar {
+  margin-bottom: 1rem;
+  height: 2rem;
+  align-self: center;
+}
+#section-buscador {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+#contenedor-temporal {
+  order: 2;
+}
